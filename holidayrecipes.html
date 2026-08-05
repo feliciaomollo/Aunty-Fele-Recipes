@@ -3,50 +3,581 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aunty Fele's Recipes</title>
-
+    <title>FriendsBodega Recipes — Snap It. Cook It. Share It.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Felipa&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <nav class="nav-menu">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        
-            <a href="Letter.html">Letter</a>
-            <a href="breakfast.html">Breakfast</a>
-            <a href="lunch.html">Lunch</a>
-            <a href="dinner.html">Dinner</a>
-        </nav>     
-    </div>
 
-    <div class="search-bar">
-        <input class="search" type="text" placeholder="Search Recipe...">
-        <button type="submit" class="btn-search">Search</button>
-    </div>
+    <!-- ═══════════════════════════════
+         STICKY NAV
+    ═══════════════════════════════ -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-inner">
 
-    <div class="container">
-        <div class="hero-image"> 
-            <img class="thumbnail" src="imagecopy.png" alt="Welcome Image">
+            <a href="index.html" class="nav-logo" aria-label="FriendsBodega Recipes home">
+                <span class="logo-text">Friends<span class="logo-accent">BodegaRecipes</span></span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#preview"       class="nav-link">Sample Card</a></li>
+                    <li><a href="breakfast.html" class="nav-link">Recipes</a></li>
+                    <li><a href="#upload"        class="nav-cta">Try It →</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
-        <div class="welcome-text">
-            <p class="Text"> 
-                <strong>Hey there Kids &middot; Welcome to my website. Super glad you could make it!</strong>
-            </p>
-        </div>
-    </div>
 
-    <p class="details"> 
-        Under <span class="span">Construction</span>
-    </p>
+        <!-- Mobile drawer -->
+        <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+            <ul>
+                <li><a href="#how-it-works" class="drawer-link">How It Works</a></li>
+                <li><a href="#preview"       class="drawer-link">Sample Card</a></li>
+                <li><a href="breakfast.html" class="drawer-link">Recipes</a></li>
+                <li><a href="#upload"        class="drawer-link drawer-cta">Try It Free →</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════
+         HERO — Diner menu board
+    ═══════════════════════════════ -->
+    <section class="hero" id="home">
+
+        <!-- Checkerboard top stripe -->
+        <div class="checker-stripe top"></div>
+
+        <div class="hero-inner">
+
+            <div class="menu-board">
+                <div class="menu-board-header">
+                    <span class="board-star">★</span>
+                    <span class="board-eyebrow"> For Home Cooks </span>
+                    <span class="board-star">★</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Snap Your<br>
+                    <em>Dish.</em><br>
+                    Get the Recipe Card.
+                </h1>
+
+                <p class="hero-sub">
+                    Take a photo of any meal — or type your recipe —<br>
+                    and we'll turn it into a beautiful, shareable card.<br>
+                    Ready to download in seconds.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#upload" class="btn-primary">
+                        Upload a Photo
+                    </a>
+                    <a href="#upload" class="btn-secondary">
+                        Type a Recipe 
+                    </a>
+                </div>
+
+                <p class="hero-note">No account needed &nbsp;·&nbsp; Free to download...For now!</p>
+            </div>
+
+            <!-- Diner counter illustration area -->
+            <div class="hero-visual">
+                <div class="recipe-card-preview" aria-label="Sample recipe card preview">
+                    <div class="card-stamp">RECIPE CARD</div>
+                    <h3 class="card-title">Spicy Chicken Wings</h3>
+                    <p class="card-serves">Makes 4 servings</p>
+                    <div class="card-table-wrap">
+                        <table class="recipe-table" aria-label="Recipe table">
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Marinate</th>
+                                    <th>Fry</th>
+                                    <th>Sauce</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 kg chicken wings</td>
+                                    <td class="step-cell" rowspan="3">marinate<br>2 hrs</td>
+                                    <td class="step-cell" rowspan="5">fry<br>375°F<br>12 min</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2 tsp smoked paprika</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 tsp garlic powder</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>¼ cup hot sauce</td>
+                                    <td></td>
+                                    <td class="step-cell" rowspan="2">toss &amp;<br>serve</td>
+                                </tr>
+                                <tr>
+                                    <td>2 tbsp honey</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer-note">
+                        friendsbodegarecipes
+                    </div>
+                </div>
+
+                <!-- Decorative diner elements -->
+                <div class="deco-badge">
+                    <span class="deco-badge-text">TODAY'S<br>SPECIAL</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Checkerboard bottom stripe -->
+        <div class="checker-stripe bottom"></div>
+    </section>
+
+
+    <!-- ═══════════════════════════════
+         HOW IT WORKS
+    ═══════════════════════════════ -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-inner">
+
+            <div class="section-label">
+                <span class="label-dash">——</span>
+                Simple as pie
+                <span class="label-dash">——</span>
+            </div>
+            <h2 class="section-title">Three Steps to Your Recipe Card</h2>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Snap or Type</h3>
+                    <p>Take a photo of your finished dish or paste your handwritten recipe. We handle both.</p>
+                    <div class="step-tag">30 seconds</div>
+                </div>
+
+                <div class="step-connector" aria-hidden="true">✦</div>
+
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>AI Does the Magic</h3>
+                    <p>Our AI reads your dish and extracts every ingredient and step into a clean recipe table.</p>
+                    <div class="step-tag">Instant</div>
+                </div>
+
+                <div class="step-connector" aria-hidden="true">✦</div>
+
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Download &amp; Share</h3>
+                    <p>Get a beautiful recipe card image ready to share on WhatsApp, Instagram, or print at home.</p>
+                    <div class="step-tag">PNG download</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════
+         UPLOAD SECTION
+    ═══════════════════════════════ -->
+    <section class="upload-section" id="upload">
+        <div class="checker-stripe top"></div>
+
+        <div class="section-inner">
+            <div class="section-label light">
+                <span class="label-dash">——</span>
+                Give it a try
+                <span class="label-dash">——</span>
+            </div>
+            <h2 class="section-title light">Make Your First Recipe Card</h2>
+
+            <div class="upload-card">
+
+                <div class="upload-tabs" role="tablist">
+                    <button class="tab-btn active" id="tab-photo" role="tab" aria-selected="true"  aria-controls="panel-photo"> Photo </button>
+                    <button class="tab-btn"        id="tab-text"  role="tab" aria-selected="false" aria-controls="panel-text"> Type It </button>
+                </div>
+
+                <!-- Photo panel -->
+                <div class="tab-panel active" id="panel-photo" role="tabpanel" aria-labelledby="tab-photo">
+                    <label class="drop-zone" for="photoInput" id="dropZone">
+                        <div class="drop-icon">🍽️</div>
+                        <p class="drop-title">Drop your food photo here</p>
+                        <p class="drop-sub">or click to browse · JPG, PNG, HEIC</p>
+                        <input type="file" id="photoInput" accept="image/*" class="file-input" aria-label="Upload food photo">
+                    </label>
+                    <div class="photo-preview" id="photoPreview" aria-live="polite"></div>
+                    <div class="dish-name-wrap">
+                        <label for="dishName" class="input-label">Dish name (optional)</label>
+                        <input type="text" id="dishName" class="text-input" placeholder="e.g. Mum's Jollof Rice">
+                    </div>
+                </div>
+
+                <!-- Text panel -->
+                <div class="tab-panel" id="panel-text" role="tabpanel" aria-labelledby="tab-text">
+                    <label for="recipeText" class="input-label">Paste or type your recipe</label>
+                    <textarea id="recipeText" class="recipe-textarea"
+                        placeholder="e.g.
+Jollof Rice — serves 4
+
+2 cups long grain rice
+1 can tomatoes
+1 onion, chopped
+2 tbsp tomato paste
+1 tsp curry powder
+Salt to taste
+
+Blend tomatoes and onion. Fry paste 5 min.
+Add rice and stock. Cook 30 min covered."
+                        rows="12"
+                        aria-label="Type or paste your recipe here"></textarea>
+                </div>
+
+                <button class="btn-generate" id="generateBtn" type="button">
+                    Generate My Recipe Card
+                </button>
+
+                <p class="upload-note">
+                    Coming soon: live AI card generation.<br>
+                    <a href="#preview">See a sample card below ↓</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="checker-stripe bottom"></div>
+    </section>
+
+
+    <!-- ═══════════════════════════════
+         SAMPLE CARD PREVIEW (full)
+    ═══════════════════════════════ -->
+    <section class="preview-section" id="preview">
+        <div class="section-inner">
+
+            <div class="section-label">
+                <span class="label-dash">——</span>
+                What you'll get
+                <span class="label-dash">——</span>
+            </div>
+            <h2 class="section-title">Sample Recipe Card</h2>
+            <p class="section-sub">Every card is formatted as a clean table — ingredients as rows, cooking steps as columns. One glance tells the whole story.</p>
+
+            <div class="full-card-wrap">
+                <div class="full-recipe-card" id="downloadCard">
+
+                    <div class="frc-header">
+                        <div class="frc-brand">★ FriendsBodega Recipes</div>
+                        <div class="frc-divider"></div>
+                        <h2 class="frc-title">Banana Nut Bread</h2>
+                        <p class="frc-serves">Makes one 9×5 loaf &nbsp;·&nbsp; About 10 servings</p>
+                    </div>
+
+                    <div class="frc-prep">
+                        <div class="prep-row">
+                            <span class="prep-label">PREP</span>
+                            <span>Butter and flour a loaf pan</span>
+                        </div>
+                        <div class="prep-row">
+                            <span class="prep-label">PREP</span>
+                            <span>Preheat oven to 350°F (170°C)</span>
+                        </div>
+                    </div>
+
+                    <div class="frc-table-wrap">
+                        <table class="frc-table" aria-label="Banana Nut Bread recipe table">
+                            <thead>
+                                <tr>
+                                    <th class="col-ingredient">Ingredient</th>
+                                    <th>Step 1</th>
+                                    <th>Step 2</th>
+                                    <th>Step 3</th>
+                                    <th>Step 4</th>
+                                    <th>Step 5</th>
+                                    <th>Step 6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 large (250g) ripe bananas</td>
+                                    <td class="action-cell">mash</td>
+                                    <td class="action-cell" rowspan="3">mash until smooth</td>
+                                    <td class="action-cell" rowspan="10">fold</td>
+                                    <td class="action-cell" rowspan="10">bake 350°F (170°C) 55 min.</td>
+                                    <td class="action-cell" rowspan="10">cool 10 min. in pan</td>
+                                    <td class="action-cell" rowspan="10">cool on wire rack</td>
+                                </tr>
+                                <tr>
+                                    <td>6 Tbs. (90mL) butter</td>
+                                    <td class="action-cell">melt</td>
+                                </tr>
+                                <tr>
+                                    <td>1 tsp. (5mL) vanilla extract</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2 large eggs</td>
+                                    <td class="action-cell">lightly beat</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1⅓ cups (167g) all-purpose flour</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>⅔ cup (130g) sugar</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>½ tsp. (2.3g) baking soda</td>
+                                    <td class="action-cell">whisk</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>¼ tsp. (1.2g) baking powder</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>½ tsp. (3g) salt</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>½ cup (70g) chopped walnuts</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="frc-footer">
+                        <span>READ LEFT TO RIGHT — EACH COLUMN COMBINES WHAT'S BEHIND IT.</span>
+                        <span>★ friendsbodegarecipes</span>
+                    </div>
+
+                </div>
+
+                <div class="download-bar">
+                    <button class="btn-download" id="downloadBtn" type="button">
+                        Download This Card as PNG
+                    </button>
+                    <p class="download-note">Free · No watermark · Yours to keep</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════
+         FOOTER
+    ═══════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="checker-stripe top"></div>
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <span class="logo-icon">🍳</span>
+                <span class="logo-text">Friends<span class="logo-accent">Bodega</span></span>
+                <p class="footer-tagline">The recipe, without the story.</p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#preview">Sample Card</a>
+                <a href="breakfast.html">Recipes</a>
+                <a href="letter.html">Letter</a>
+            </nav>
+
+            <p class="footer-copy">&copy; 2026 FriendsBodegaRecipes. Made with ♥ for home cooks everywhere.</p>
+
+        </div>
+    </footer>
+
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ── Sticky scroll shadow ── */
+        const hdr = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            hdr.classList.toggle('scrolled', window.scrollY > 10);
+        }, { passive: true });
+
+        /* ── Hamburger ── */
+        const hamburger = document.getElementById('hamburger');
+        const drawer    = document.getElementById('mobileDrawer');
+
+        function openMenu() {
+            drawer.classList.add('open');
+            hamburger.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburger.setAttribute('aria-label', 'Close menu');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            drawer.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open menu');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+        hamburger.addEventListener('click', () =>
+            drawer.classList.contains('open') ? closeMenu() : openMenu()
+        );
+        drawer.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeMenu(); hamburger.focus(); }
+        });
+
+        /* ── Smooth scroll for anchor links ── */
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    closeMenu();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        /* ── Tab switching ── */
+        const tabBtns   = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+                tabPanels.forEach(p => p.classList.remove('active'));
+
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                const panel = document.getElementById(btn.getAttribute('aria-controls'));
+                if (panel) panel.classList.add('active');
+            });
+        });
+
+        /* ── Photo upload preview ── */
+        const photoInput = document.getElementById('photoInput');
+        const photoPreview = document.getElementById('photoPreview');
+        const dropZone = document.getElementById('dropZone');
+
+        photoInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (!file) return;
+            showPreview(file);
+        });
+
+        // Drag and drop
+        ['dragenter', 'dragover'].forEach(evt => {
+            dropZone.addEventListener(evt, e => {
+                e.preventDefault();
+                dropZone.classList.add('drag-over');
+            });
+        });
+        ['dragleave', 'drop'].forEach(evt => {
+            dropZone.addEventListener(evt, () => dropZone.classList.remove('drag-over'));
+        });
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) showPreview(file);
+        });
+
+        function showPreview(file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                photoPreview.innerHTML = `
+                    <div class="preview-wrap">
+                        <img src="${e.target.result}" alt="Your uploaded food photo" class="preview-img">
+                        <button class="preview-remove" id="removePhoto" type="button" aria-label="Remove photo">✕ Remove</button>
+                    </div>`;
+                document.getElementById('removePhoto').addEventListener('click', () => {
+                    photoPreview.innerHTML = '';
+                    photoInput.value = '';
+                });
+                dropZone.style.display = 'none';
+                photoPreview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        /* ── Generate button (placeholder) ── */
+        document.getElementById('generateBtn').addEventListener('click', () => {
+            const btn = document.getElementById('generateBtn');
+            btn.textContent = '⏳ Generating your card…';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = '✨ Generate My Recipe Card';
+                btn.disabled = false;
+                document.getElementById('preview').scrollIntoView({ behavior: 'smooth' });
+            }, 1800);
+        });
+
+        /* ── Download card as PNG (html2canvas) ── */
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', () => {
+            downloadBtn.textContent = '⏳ Preparing download…';
+            downloadBtn.disabled = true;
+
+            // Load html2canvas from CDN then capture
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+            script.onload = function () {
+                const card = document.getElementById('downloadCard');
+                html2canvas(card, {
+                    scale: 2,
+                    backgroundColor: '#FFF7D3',
+                    useCORS: true,
+                    logging: false
+                }).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = 'FriendsBodega-RecipeCard.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                    downloadBtn.textContent = 'Downloaded!';
+                    setTimeout(() => {
+                        downloadBtn.textContent = 'Download This Card as PNG';
+                        downloadBtn.disabled = false;
+                    }, 2500);
+                }).catch(() => {
+                    downloadBtn.textContent = 'Download This Card as PNG';
+                    downloadBtn.disabled = false;
+                });
+            };
+            document.head.appendChild(script);
+        });
+
+    }());
+    </script>
 
 </body>
 </html>
