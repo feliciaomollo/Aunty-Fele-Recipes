@@ -1,0 +1,26 @@
+# ============================================================
+# netlify.toml — Netlify Configuration File
+#
+# WHAT IS THIS FILE?
+# This file tells Netlify how to set up your website.
+# It lives in the ROOT of your project (same folder as index.html).
+#
+# You only need to change this file if Netlify asks you to.
+# ============================================================
+
+[build]
+  # "publish" = the folder Netlify serves to visitors.
+  # Since our index.html is in the root folder, we use "."
+  publish = "."
+
+  # "functions" = where our serverless functions live.
+  # Netlify will find extract-recipe.js in this folder.
+  functions = "netlify/functions"
+
+# This section makes our function available at:
+# /.netlify/functions/extract-recipe
+# (Netlify does this automatically, this just confirms it)
+[[redirects]]
+  from = "/api/*"
+  to   = "/.netlify/functions/:splat"
+  status = 200
