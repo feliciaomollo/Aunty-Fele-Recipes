@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+
+                        <h1 class="text-center mb-4">
+                            Student Registration
+                        </h1>
+
+                        <form>
+
+                            <!-- Name -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name </label>
+
+                                <input type="text" id="name" name="name" class="form-control"  placeholder="Enter your full name">
+                                
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address </label>
+
+                                <input type="email" id="email" name="email" class="form-control" placeholder="example@email.com" required>
+                            </div>
+
+
+                            <!-- Age -->
+                            <div class="mb-3">
+                                <label for="age" class="form-label"> Age </label>
+ 
+                                <input  type="number" id="age" name="age" class="form-control" placeholder="Enter your age" min="1" max="100" required>
+                            </div>
+
+
+                            <!-- Gender -->
+                            <div class="mb-3">
+
+                                <label class="form-label d-block"> Gender</label>
+
+                                <div class="form-check form-check-inline">
+
+                                    <input  type="radio" id="female" name="gender" value="female" class="form-check-input">
+
+                                    <label for="female" class="form-check-label"> Female </label>
+
+                                </div>
+
+
+                                <div class="form-check form-check-inline">
+
+                                    <input  type="radio" id="male" name="gender" value="male" class="form-check-input">
+
+                                    <label for="male" class="form-check-label"> Male </label>
+
+                                </div>
+
+                                 <div class="form-check form-check-inline">
+
+                                    <input  type="radio" id="other" name="gender" value="other" class="form-check-input">
+
+                                    <label for="other" class="form-check-label"> Other </label>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Course -->
+                            <div class="mb-3">
+
+                                <label for="course" class="form-label">  Select Course </label>
+                            
+                                <select id="course" name="course" class="form-select" required></select>
+
+                                    <option value="" selected disabled> Choose a course </option>
+
+                                    <option value="html">HTML & CSS</option>
+
+                                    <option value="javascript">JavaScript</option>
+
+                                    <option value="python">Python</option>
+
+                                    <option value="django">Django</option>
+                                </select>
+
+                            </div>
+
+                            <!-- Skill Level -->
+                            <div class="mb-3">
+
+                                <label for="skill" class="form-label"> Programming Skill Level</label>
+
+                                <input type="range"  id="skill" name="skill" class="form-range" min="1" max="10" value="5">
+
+                                <div class="d-flex justify-content-between">
+                                    <small>Beginner</small>
+                                    <small>Advanced</small>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Terms -->
+                            <div class="form-check form-switch mb-4">
+
+                                <input type="checkbox" id="terms" name="terms" class="form-check-input" required> 
+
+                                <label for="terms" class="form-check-label"></label>
+                                
+                                    I agree to the terms and conditions
+                                </label>
+
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="d-grid">
+
+                                <button type="submit" class="btn btn-primary">Register Student</button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
