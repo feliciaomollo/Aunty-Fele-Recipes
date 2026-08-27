@@ -6,11 +6,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
     <title>Bootstrap Modal</title>
     <link rel="stylesheet" href="styling.css">
 </head>
 <body>
     <div class="container">
-       <button class="btn-btn-success" data-bs-toggle="modal" data-bs-toggle="#modal">Open</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Open</button>
+            <div class="modal" id="modal">
+                <div class="modal-dialog modal-dialogue-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header"> Header</div>
+                                
+                            <div class="modal-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Omnis aliquam voluptatibus, necessitatibus laborum est, 
+                                libero eveniet odio blanditiis vitae sit perferendis eligendi rerum laudantium 
+                                aut hic sint voluptatem accusamus cumque officia! Quas eveniet fuga suscipit id 
+                                ipsum facilis sunt incidunt adipisci minus quidem error reiciendis consequuntur recusandae,
+                                minima perspiciatis odit cumque impedit tempore in porro. Maiores aliquid soluta nulla deleniti sint, 
+                                est id placeat nesciunt necessitatibus, ea esse distinctio reiciendis? Eum at pariatur 
+                                laborum asperiores omnis eius reprehenderit explicabo aut? Cumque dolorum non corrupti sint 
+                                quibusdam nostrum possimus vero reprehenderit voluptatibus eum, consequuntur modi ipsam molestiae 
+                                rerum itaque dolore deleniti reiciendis officia maxime placeat hic! Eaque sunt soluta minima neque 
+                                tenetur hic corrupti error illum accusantium earum reprehenderit quisquam temporibus magni iure molestiae quidem,
+                                pariatur molestias consequatur reiciendis porro modi voluptatem explicabo corporis? Animi doloribus 
+                                quibusdam illo fuga reprehenderit tempora earum mollitia quam itaque quod vel expedita laboriosam officiis
+                                provident aspernatur ipsa, praesentium, perferendis tempore repellendus placeat, a impedit sapiente recusandae voluptatem. 
+                                Est minus numquam quae culpa rem corporis dignissimos earum aliquam officia provident tempore voluptatem consequuntur, 
+                                possimus in aperiam dolore ratione accusamus officiis vitae tenetur magni velit sit ducimus? Voluptas inventore id ipsam magni
+                                laudantium odio earum deleniti sapiente!
+
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                                <div class="modal-footer"> Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
