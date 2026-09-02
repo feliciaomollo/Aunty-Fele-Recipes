@@ -1,8 +1,3 @@
-    p{
-        font-family: Roboto, Arial;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
     .video-description{
        color: rgb(96, 96, 96);
        line-height:24px;
@@ -28,28 +23,13 @@
         text-decoration: underline;
     }
     .image{
-        width:400px;
-        display:block;
+        width: 100%;
     }
-    .search-bar{
-        font-size: 15px;
-        margin-left:120px;
-        display: block;
-    }
-    .video-preview{
-       width: 300px;
-       display:inline-block;
-       vertical-align:top;
-       margin-right: 120px;
-    }
-    .channel-profile{
-        display: inline-block;
-        width: 50px;
-        vertical-align: top;
-    }
-    .video-info{
-        display: inline-block;
-        width: 200px;
+    
+    .video-info-grid{
+        display: grid;
+        grid-template-column: 50px 1fr;
+       
     }
     .channel-avatar{
         width:50px;
@@ -57,4 +37,10 @@
     }
     .thumbnail-row{
         margin-bottom:12px;
+    }
+    .video-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
     }
